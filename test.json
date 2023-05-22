@@ -1,0 +1,158 @@
+[
+  {
+    "paymentDesc": "eProcurement document # 16227",
+    "paymentExplanation": "PurchaseRequisitionV2 document # vndoloka (155)",
+    "paymentType": "CODE",
+    "payments": [
+      {
+        "preFormat": "SU LECTURE E-CLAIMS - KES",
+        "currency": "KES",
+        "description": "eProcurement document # 16227",
+        "amount": 40.0,
+        "bankAccNo": "",
+        "payeeId": "SU LECTURE E-CLAIMS - KES"
+      }
+    ],
+    "accountingLines": [
+      {
+        "chartCode": "SU",
+        "accNbr": "2202600",
+        "subAccNbr": "",
+        "objCode": "2880",
+        "subObjCode": "",
+        "projectCode": "",
+        "creditDebit": "D",
+        "amount": 40.0,
+        "orgRefId": ""
+      },
+      {
+        "chartCode": "SU",
+        "accNbr": "2202600",
+        "subAccNbr": "",
+        "objCode": "9010",
+        "subObjCode": "",
+        "projectCode": "",
+        "creditDebit": "C",
+        "amount": 40.0,
+        "orgRefId": ""
+      }
+    ]
+  },
+  {
+    "paymentDesc": "eProcurement document # 16266",
+    "paymentExplanation": "PurchaseRequisitionV2 document # lnaisoi (3520)",
+    "paymentType": "CODE",
+    "payments": [
+      {
+        "preFormat": "SU LECTURE E-CLAIMS - KES",
+        "currency": "KES",
+        "description": "eProcurement document # 16266",
+        "amount": 2.32,
+        "bankAccNo": "",
+        "payeeId": "SU LECTURE E-CLAIMS - KES"
+      }
+    ],
+    "accountingLines": [
+      {
+        "chartCode": "SU",
+        "accNbr": "2205200",
+        "subAccNbr": "",
+        "objCode": "2641",
+        "subObjCode": "",
+        "projectCode": "",
+        "creditDebit": "D",
+        "amount": 2.32,
+        "orgRefId": ""
+      },
+      {
+        "chartCode": "SU",
+        "accNbr": "2205200",
+        "subAccNbr": "",
+        "objCode": "9010",
+        "subObjCode": "",
+        "projectCode": "",
+        "creditDebit": "C",
+        "amount": 2.32,
+        "orgRefId": ""
+      }
+    ]
+  },
+  {
+    "paymentDesc": "eProcurement document # 16230",
+    "paymentExplanation": "PurchaseRequisitionV2 document # vndoloka (155)",
+    "paymentType": "CODE",
+    "payments": [
+      {
+        "preFormat": "SU LECTURE E-CLAIMS - KES",
+        "currency": "KES",
+        "description": "eProcurement document # 16230",
+        "amount": 10.0,
+        "bankAccNo": "",
+        "payeeId": "SU LECTURE E-CLAIMS - KES"
+      }
+    ],
+    "accountingLines": [
+      {
+        "chartCode": "SU",
+        "accNbr": "2202600",
+        "subAccNbr": "",
+        "objCode": "2880",
+        "subObjCode": "",
+        "projectCode": "",
+        "creditDebit": "D",
+        "amount": 10.0,
+        "orgRefId": ""
+      },
+      {
+        "chartCode": "SU",
+        "accNbr": "2202600",
+        "subAccNbr": "",
+        "objCode": "9010",
+        "subObjCode": "",
+        "projectCode": "",
+        "creditDebit": "C",
+        "amount": 10.0,
+        "orgRefId": ""
+      }
+    ]
+  },
+  {
+    "paymentDesc": "TEst",
+    "paymentExplanation": "Test",
+    "paymentType": "CODE",
+    "payments": [
+      {
+        "preFormat": "AJGDGF - KES",
+        "currency": "KES",
+        "description": "TEst Payment",
+        "amount": 200,
+        "bankAccNo": "",
+        "payeeId": "AJGDGF - KES"
+      }
+    ],
+    "accountingLines": [
+      {
+        "chartCode": "SC",
+        "accNbr": "30001000",
+        "subAccNbr": "",
+        "objCode": "9041",
+        "subObjCode": "",
+        "projectCode": "234340",
+        "creditDebit": "D",
+        "amount": 200,
+        "orgRefId": ""
+      },
+      {
+        "chartCode": "SC",
+        "accNbr": "30001000",
+        "subAccNbr": "",
+        "objCode": "8041",
+        "subObjCode": "",
+        "projectCode": "234340",
+        "creditDebit": "C",
+        "amount": 200,
+        "orgRefId": ""
+      }
+    ]
+  }
+]
