@@ -25,12 +25,13 @@ class KualiCompanion
         );
         try {
             $response = \Http::withoutVerifying()->post($externalSystemUrl,[$encryptedPayload])->throw()->body();
-            if ($response !='012') {
-                abort(500, 'Payment was not successfully posted to KFS');
-            }
-            \Log::info("POST Successful:");
+            \Log::info("KFS Response:");
             \Log::info($response);
-            return true;
+            /*if ($response !='012') {
+                abort(500, 'Payment was not successfully posted to KFS');
+            }*/
+            \Log::info("POST Successful:");
+            return $response;
         } catch (RequestException $exception) {
             \Log::error($exception->response->body());
             return false;
