@@ -14,5 +14,6 @@ return [
     ],
     'http' => [
         'pv_endpoint' => env('KUALI_HTTP_PV_ENDPOINT'),
+        'jv_endpoint' => env('KUALI_HTTP_JV_ENDPOINT'),
     ],
 ];

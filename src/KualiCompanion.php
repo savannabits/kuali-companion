@@ -2,9 +2,12 @@
 
 namespace Savannabits\KualiCompanion;
 
+use Http;
 use Illuminate\Http\Client\HttpClientException;
 use Illuminate\Http\Client\RequestException;
+use Illuminate\Support\Collection;
 use Savannabits\KualiCompanion\Services\EnterpriseFeed;
+use Savannabits\KualiCompanion\Services\KualiJournalVoucher;
 use Savannabits\KualiCompanion\Services\KualiPaymentVoucher;
 
 class KualiCompanion
@@ -19,7 +22,8 @@ class KualiCompanion
         return KualiPaymentVoucher::init();
     }
 
-    public function postPV(string $encryptedPayload) {
+    public function postPV(string $encryptedPayload): bool|string
+    {
         $externalSystemUrl = $this->getUrl(config('kuali-companion.http.pv_endpoint'),
             ['{iv}' => config('sucipher.iv')]
         );
@@ -40,6 +44,26 @@ class KualiCompanion
             return false;
         }
     }
+    public function postJV(KualiJournalVoucher $jv): bool|string
+    {
+        $externalSystemUrl = $this->getUrl(config('kuali-companion.http.jv_endpoint'),
+            /*['{iv}' => config('sucipher.iv')]*/
+        );
+        try {
+            $response = Http::withoutVerifying()->post($externalSystemUrl, $jv->collect()->toArray())->throw()->body();
+            \Log::info("KFS Response:");
+            \Log::info($response);
+            \Log::info("POST Successful:");
+            return $response;
+        } catch (RequestException $exception) {
+            \Log::error($exception->response->body());
+            return false;
+        } catch (\Throwable $exception) {
+            \Log::error($exception);
+            return false;
+        }
+    }
+
     public function getUrl(string $endpoint, array $substitutions = []): string
     {
         $base = rtrim(config('kuali-companion.base_url'),'/');
