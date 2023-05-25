@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38059b9b3d5908257738cdf25e107ed6",
+    "content-hash": "b10279db85e948d23f14fe6fb4d38dc1",
     "packages": [
         {
             "name": "brick/math",
@@ -1937,6 +1937,68 @@
                 }
             ],
             "time": "2023-04-15T23:01:58+00:00"
+        },
+        {
+            "name": "savannabits/sucipher",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/savannabits/sucipher.git",
+                "reference": "228bf6998e184dd9b5652da68df370e87050fd89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/savannabits/sucipher/zipball/228bf6998e184dd9b5652da68df370e87050fd89",
+                "reference": "228bf6998e184dd9b5652da68df370e87050fd89",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "illuminate/support": ">=8.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Savannabits\\Sucipher\\SucipherServiceProvider"
+                    ],
+                    "aliases": {
+                        "Sucipher": "Savannabits\\Sucipher\\SucipherFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Savannabits\\Sucipher\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Maosa",
+                    "email": "smaosa@savannabits.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "AES encryption / Decryption tool that works with javax.crypto",
+            "homepage": "https://github.com/savannabits/sucipher",
+            "keywords": [
+                "savannabits",
+                "sucipher"
+            ],
+            "support": {
+                "issues": "https://github.com/savannabits/sucipher/issues",
+                "source": "https://github.com/savannabits/sucipher/tree/v1.0.0"
+            },
+            "time": "2023-05-17T07:20:41+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7409,7 +7471,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "savannabits/sucipher": 0
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
