@@ -22,6 +22,11 @@ class KualiCompanion
         return KualiPaymentVoucher::init();
     }
 
+    public function journalVoucher(): KualiJournalVoucher
+    {
+        return KualiJournalVoucher::init();
+    }
+
     public function postPV(string $encryptedPayload): bool|string
     {
         $externalSystemUrl = $this->getUrl(config('kuali-companion.http.pv_endpoint'),
